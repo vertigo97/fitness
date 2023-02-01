@@ -1,0 +1,559 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+:root {
+    --main-bg: #1E1E1E;
+    --text-color: #fafaf9;
+    --logo-color: #FAFAF9;
+    --btn-color: #E6533C;
+    --video-div-color: #7A29DC;
+    --distance-div-color: #EFA082;
+    --distance-div-icon: #EF8964;
+    --distance-div-text: #FFFFFF;
+    --first-card-color: #323443;
+    --second-card-color: #232532;
+    --third-card-color: #4F5261;
+    --see-more: #0070C9;
+    --join-club: #0070C9;
+    --logo-weight: 700;
+    --logo-font: 16px;
+    --nav-font: 12px;
+    --nav-weight: 400;
+    --paragraph-color: #efede8;
+    --subheading-font: 40px;
+    --subheading-letter-spacing: 0.3px;
+    --paragraph-line-height: 24px;
+    --paragraph-letter-spacing: 0.5px;
+    --card-heading-font: 16px;
+    --card-line-height: 24px;
+    --card-letter-spacing: 0.5px;
+
+}
+
+body{
+
+    background: var(--main-bg);
+
+}
+
+/*-------styling navigation--------------*/
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 51px 64px 0 64px;
+
+
+}
+
+.navigation .logo  {
+
+    color: var(--logo-color);
+    font-size: var(--logo-font);
+    font-weight: var(--logo-weight);
+    text-transform: uppercase;
+}
+
+.navlinks .links {
+
+    display: flex;
+    column-gap: 1.25rem;
+}
+.navlinks  li {
+
+    list-style: none;
+    text-decoration: none;
+}
+
+.navlinks a {
+
+    text-decoration: none;
+    color:var(--text-color);
+    text-transform: uppercase;
+    font-size: var(--nav-font);
+}
+
+/*--------main content ----------------*/
+
+.workout {
+
+    padding: 180px 44px 0 70px;
+    position: relative;
+
+}
+.workout .image img {
+    position: absolute;
+    right: 0;
+    padding-right: 120px;
+    min-height: 409px;
+
+}
+
+/*styling video tutorial div*/
+
+.workout .video-tutorial{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 206px;
+    height: 96px;
+    background: #303030;
+    border-radius: 12px;
+    position: absolute;
+    right: 50%;
+    top: 52%;
+    left: 50%;
+    object-position: right;
+
+}
+.workout .video-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 3rem;
+    color: #EF8963;
+
+}
+
+
+.workout .text-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+.text-video h3 {
+    color: var(--text-color);
+}
+.text-video .span-video {
+    color: var(--paragraph-color);
+    font-size: .8rem;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+}
+
+/*end of styling video tutorial div*/
+
+/*style distance div*/
+
+.distance {
+    display: inline-block;
+    padding: 10px;
+    background: var(--distance-div-color);
+    color: var(--text-color);
+    width: 180px;
+    height: 110px;
+    border-radius: 12px;
+    position: absolute;
+    right: 8%;
+}
+
+.distance .icon-run {
+    font-size: 1.5rem;
+    display: inline-block;
+
+}
+
+.distance .data{
+    display: flex;
+    column-gap: 11px;
+    justify-content: center;
+    align-items: flex-end;
+}
+.distance  .data h2{
+
+    font-size: 3rem;
+    line-height: 50px;
+    letter-spacing: -5px;
+    font-weight: bold;
+}
+.distance .metric{
+    font-size: 1rem;
+    color: var(--paragraph-color);
+    letter-spacing: 0.5px;
+    line-height: 24px;
+}
+
+
+
+/*end of distance div styling*/
+
+
+/*workout video div styling*/
+
+.workout-videos {
+    height: 98px;
+    width: 193px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 1rem;
+    background: var(--video-div-color);
+    border-radius: 12px;
+    position: absolute;
+    right: 5%;
+    top: 60%;
+}
+
+.workout-videos h3{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 1px;
+    color: #FAFAF9;
+}
+
+.workout-videos .workout-text{
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: var(--paragraph-color);
+}
+
+/*end of workout video div styling*/
+
+
+.workout .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 2.875rem;
+
+}
+
+.workout h1{
+    font-size: 150px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    line-height: 170px;
+
+
+}
+
+.workout .main-paragraph{
+    color: var(--paragraph-color);
+    padding-top: 46px;
+    font-size: 16px;
+    letter-spacing: var(--paragraph-letter-spacing);
+    line-height: var(--paragraph-line-height);
+    z-index: 1000;
+
+}
+
+.btn {
+    display: inline-block;
+    padding-top: 50px;
+}
+
+.btn button {
+
+    width: 170px;
+    height: 70px;
+    border-radius: 10px;
+    background: var(--btn-color);
+    color: #ffffff;
+    outline: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+.small-paragraph {
+    display: block;
+}
+.small-paragraph p {
+    color: var(--paragraph-color);
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: inline-block;
+    padding-top: 122px;
+    padding-bottom: 33px;
+}
+
+.brands {
+    display: inline-flex;
+    justify-content: start;
+    align-content: start;
+    column-gap: 1rem;
+}
+
+/*section offers style*/
+
+.oferrs,
+h3,
+h5{
+    color: #FAFAF9;
+}
+
+.offers {
+    display: grid;
+    grid-template-rows: .5fr 1fr;
+    justify-content: start;
+    align-items: start;
+    padding-top: 150px;
+    padding-left: 70px;
+}
+
+.offers .offers-title{
+
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    line-height: 50px;
+    padding-bottom: 20px;
+}
+
+.offers-text .actuall-offer{
+    font-size: 1rem;
+    color: var(--paragraph-color);
+    letter-spacing: 0.5px;
+    line-height: 24px;
+}
+
+.offers .cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 2rem;
+    padding-top: 50px;
+}
+
+
+.cards card {
+    min-height: 200px;
+    min-width: 90px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 50px;
+}
+
+
+.cards h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    padding-bottom: 12px;
+}
+
+.cards p {
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+    color: var(--text-color);
+}
+
+.cards card:nth-child(even){
+    background: var(--first-card-color);
+}
+
+.cards card:nth-child(odd){
+    background: var(--second-card-color);
+}
+
+/*end of section offers style*/
+
+/*styling two pictures and text*/
+
+.home-workout {
+    display: grid;
+    grid-template-rows: 2fr;
+    row-gap: 5rem;
+    padding: 0 70px;
+}
+
+.first-recommendation {
+    padding-top: 160px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 50px;
+}
+.second-recommendation {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 50px;
+}
+
+.home-workout h5{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: 0.83px;
+    line-height: 70px;
+    padding-bottom: 38px;
+}
+
+.home-workout p{
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+    color: var(--paragraph-color);
+}
+
+.home-workout a {
+    text-decoration: none;
+}
+.home-workout a span {
+    color: var(--text-color);
+}
+ /*end of styling of two images and section*/
+
+/*footer styling*/
+footer {
+    padding: 150px 70px 100px 70px;
+}
+
+.membership {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+}
+
+.membership h4{
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    line-height: 50px;
+    color: var(--text-color);
+    padding-bottom: 30px;
+}
+
+.membership p {
+
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    color: var(--paragraph-color)
+}
+.membership .title {
+
+    border-bottom: 1px solid white;
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--text-color);
+    letter-spacing: 0.83px;
+    line-height: 70px;
+}
+
+.wrapper {
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 3rem;
+
+}
+
+.wrapper .join {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #232532;
+    row-gap: 1rem;
+
+}
+
+.wrapper .join-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px 15px 50px;
+}
+
+.wo-plus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    background: #323443;
+    padding: 70px;
+}
+.wo-plus .wo-plus-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px 15px 50px;
+}
+
+.list .items {
+
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    color: var(--paragraph-color);
+
+}
+
+.end-link a {
+    text-decoration: none;
+}
+.end-link a span {
+    color: var(--text-color);
+}
+
